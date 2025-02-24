@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-route
 import Navbar from './components/NavBar';
 import SignUp from './components/SignUp';
 import Login from './components/Login';
+import EventForm from './components/EventForm';
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const AppContent = () => {
       <Routes>
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
+        <Route path='/create-event' element={<EventForm/>}></Route>
       </Routes>
     </>
   );

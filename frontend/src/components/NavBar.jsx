@@ -21,13 +21,21 @@ const Navbar = () => {
       {/* Navigation Links - Default Column-wise, Changes to Row on Click */}
       <ul className={`flex flex-col items-center gap-6 m-4 md:flex-row transition-all duration-300 ease-in-out ${
         isOpen ? "flex-row" : "hidden md:flex flex-col"
-      }`}>
-        {["About", "Contact", "Create Events", "Upcoming Events"].map((item, index) => (
-          <li key={index} className="relative hover:cursor-pointer before:absolute before:bottom-[-3px] before:left-0 before:w-0 before:h-[2px] before:bg-black before:transition-all before:duration-300 hover:before:w-full">
-            {item}
-          </li>
-        ))}
-      </ul>
+        }`}>
+        <li className="relative hover:cursor-pointer before:absolute before:bottom-[-3px] before:left-0 before:w-0 before:h-[2px] before:bg-black before:transition-all before:duration-300 hover:before:w-full">
+            <Link to="/about">About</Link>
+        </li>
+        <li className="relative hover:cursor-pointer before:absolute before:bottom-[-3px] before:left-0 before:w-0 before:h-[2px] before:bg-black before:transition-all before:duration-300 hover:before:w-full">
+            <Link to="/home">Home</Link>
+        </li>
+        <li className="relative hover:cursor-pointer before:absolute before:bottom-[-3px] before:left-0 before:w-0 before:h-[2px] before:bg-black before:transition-all before:duration-300 hover:before:w-full">
+            <Link to="/create-event">Create Events</Link>
+        </li>
+        <li className="relative hover:cursor-pointer before:absolute before:bottom-[-3px] before:left-0 before:w-0 before:h-[2px] before:bg-black before:transition-all before:duration-300 hover:before:w-full">
+            <Link to="/upcoming-events">Upcoming Events</Link>
+        </li>
+    </ul>
+
 
       <div className="flex flex-col md:flex-row items-center gap-4">
         <ul className="flex flex-col md:flex-row items-center gap-4">
